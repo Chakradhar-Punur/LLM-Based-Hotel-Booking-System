@@ -1,6 +1,5 @@
-# Ignore Python virtual environments
+# Ignore virtual environment & large files
 venv/
-
-# Ignore ONNX and Torch Libraries
+data/
 *.so
 *.dylib
