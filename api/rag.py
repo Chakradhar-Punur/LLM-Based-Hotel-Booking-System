@@ -75,6 +75,10 @@ def generate_answer(question):
         if retrieved_data.empty:
             return f"No revenue data found for {month_map_reverse.get(month, month)} {year if year else ''}."
         
+        if "total revenue" in question.lower():
+            total_revenue = retrieved_data["revenue"].sum()
+            return f"The total revenue in {month_map_reverse.get(month, month)} {year} is ${total_revenue:,.2f}."
+
         # Group by hotel and sum revenue
         hotel_revenue = retrieved_data.groupby("hotel")["revenue"].sum()
 
