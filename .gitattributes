@@ -1,0 +1,4 @@
+data/booking_embeddings.npy filter=lfs diff=lfs merge=lfs -text
+data/faiss_index.bin filter=lfs diff=lfs merge=lfs -text
+/Users/Chakradhar/Hotel_Booking_System_LLM/data/booking_embeddings.npy filter=lfs diff=lfs merge=lfs -text
+/Users/Chakradhar/Hotel_Booking_System_LLM/data/faiss_index.bin filter=lfs diff=lfs merge=lfs -text
