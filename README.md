@@ -265,4 +265,5 @@ The output should show all the precomputed analytics.
 * Deploy API using Docker & cloud hosting.
 
 
-Author: Chakradhar
+### Author: 
+Chakradhar
