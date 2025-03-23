@@ -218,6 +218,37 @@ URL: http://127.0.0.1:5000/health
 
 }
 
+## Testing the Database
+
+1) Run the following command to access the database (e.g., hotel_data.db):
+```
+sqlite3 data/hotel_data.db
+```
+(Replace data/hotel_data.db with the correct path of the database)
+
+2) Once inside SQLite, check if tables for query history and analytics exist:
+```
+.tables
+```
+The expected output should be:
+```
+analytics  query_history
+```
+
+3) To see if user queries are being stored, run:
+
+```
+SELECT * FROM query_history ORDER BY timestamp DESC LIMIT 10;
+```
+The output should show the queries with the timestamps.
+
+4) To verify if analytics data is being stored:
+
+```
+SELECT * FROM analytics;
+```
+The output should show all the precomputed analytics.
+
 ##  Implementation Choices & Challenges
 
 * Why SQLite? → Easy to maintain & lightweight for real-time analytics storage.
